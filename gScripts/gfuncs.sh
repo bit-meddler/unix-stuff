@@ -1,5 +1,5 @@
 #!/bin/bash
-# gfuncs.bsh
+# ~/gScripts/gfuncs.bsh
 
 # convenience
 alias cdd='cd $GIANT_DATA_DIR;/bin/pwd'
@@ -14,8 +14,9 @@ isetws() {
 
   # Escape from relative addressing and get a canonical path to this place
   NEW_WS_DIR=`(cd $NEW_WS_DIR;/bin/pwd)`
-  # Clean up the path
-  WS_BASENAME=basename $NEW_WS_DIR
+
+  # Note the path
+  WS_BASENAME=$(basename $NEW_WS_DIR)
 
   # set session ws
   export GIANT_DATA_DIR=$NEW_WS_DIR
@@ -42,7 +43,7 @@ isetws() {
     else
         RTT_SOURCE="."
     fi
-  echo "here"
+
   fi
   # RETORT
   echo "Updated Giant Workspace to $WS_BASENAME$RTT_SOURCE"
