@@ -53,6 +53,6 @@ function prompt {
   local WHITEBOLD="\[\033[1;37m\]"
 
 
-  export PS1="$RESET$YELLOW[$RESET\!$YELLOW]$BLUEBOLD\u@\h$GREENBOLD\W$YELLOWBOLD\$$WHITE "
+  export PS1="$YELLOW[$WHITE\!$YELLOW]$BLUEBOLD\u@\h$GREENBOLD\W$YELLOWBOLD\$$WHITE "
 }
 prompt
