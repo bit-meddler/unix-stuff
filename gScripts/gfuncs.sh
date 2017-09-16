@@ -1,9 +1,23 @@
-#!/bin/bash
+#!/bin/bin/bash
 # ~/gScripts/gfuncs.bsh
+
+# ENV
+export GS_PERSIST_FILE=~/.gsPersist
 
 # convenience
 alias cdd='cd $GIANT_DATA_DIR;/bin/pwd'
 alias cddd='cd $GIANT_DATA_DIR;/bin/pwd;/bin/ls'
+
+# usage
+helpgf(){
+  echo -e "isetpws [PATH]\n\tSet the persisting Workspace to the given PATH.\n"
+  echo -e "iudpws \n\tUpdate this shell's env to reflect the current Persistent Workspace.\n"
+  echo -e "isetws \n\tSet this shell's env to the current working directory.\n"
+  echo -e "isetws [PATH]\n\tSet this shell's env to the given PATH.\n"
+  echo -e "iseews\n\tShow the current workspace.\n"
+  echo -e "cdd\n\tGo to the current workspace and show the full path."
+  echo -e "cddd\n\tGo to the current workspace, prin thte path and list it."
+}
 
 ###############
 # set workspace
@@ -71,4 +85,11 @@ iudpws() {
   else
     echo "did you mean to 'isetpws $1'?"
   fi
+}
+
+########
+# helper
+
+iseews(){
+  echo "Current workspace is '$GIANT_DATA_DIR'"
 }

@@ -23,9 +23,6 @@ cpd(){
 # Misc
 alias hog='/usr/bin/top -o %CPU'
 
-# Envars for the gScripts
-export GS_PERSIST_FILE=~/.gsPersist
-
 # Source the Giant Scripts
 source "$MY_GIANT_SCRIPTS/gfuncs.sh"
 
@@ -53,6 +50,6 @@ function prompt {
   local WHITEBOLD="\[\033[1;37m\]"
 
 
-  export PS1="$YELLOW[$WHITE\!$YELLOW]$BLUEBOLD\u@\h$GREENBOLD\W$YELLOWBOLD\$$WHITE "
+  export PS1="$YELLOW[$WHITE\!$YELLOW]$BLUEBOLD\u@\h$GREENBOLD\W$YELLOWBOLD \$$WHITE "
 }
 prompt
